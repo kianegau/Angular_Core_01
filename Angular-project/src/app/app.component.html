@@ -1,0 +1,22 @@
+<!-- <div class="container">
+  <h2>Child Component data pass</h2>
+<app-todos-lists (click)="onClick($event)"></app-todos-lists>
+<p>{{childata}}</p>
+</div> -->
+
+<h1>Todos Lists</h1>
+<p>Enter text into the input field to add item to your lists</p>
+<p>Click the item to mark it as complete</p>
+<p>Click the "Delete" to remove the item from your list.</p>
+<br>
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Enter Todo" [(ngModel)]="TodoName" > 
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="button" (click)="AddTodo()">Add</button>
+  </span>
+</div>
+<ul *ngFor="let Todo of Todos">
+  <li (click)="ChangeCompleted(Todo)" [ngStyle]="{ 'background-color' : MarkColor(Todo.completed) }" >Task Name: {{Todo.name}} Completed: {{Todo.completed}} <button class="btn btn-default" type="button" (click)="DeleteTodo(Todo)">Delete</button></li>
+  
+
+

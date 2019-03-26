@@ -1,0 +1,24 @@
+.form-control
+{
+    height: 30px;
+    width: 300px;
+}
+.btn {
+    height: 36px;
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+}
+.input-group {
+    padding-left: 42%;
+}
+ul{
+    padding-left: 43%;
+}
+p{
+    text-align: center;
+}
+li{
+    display: inline-block;
+}
